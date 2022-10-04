@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timer</title>
+  <link rel="icon" type="image" href="assets/img/clock.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <main>
+    <div id="description">
+      <h2>Horas</h2>
+      <h2>Minutos</h2>
+      <h2>Segundos</h2>
+    </div>
+
+    <div id="div-time">
+      <input type="text" id="hours" class="time-input enabled" 
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+      maxlength="2" placeholder="00" autocomplete="off">
+      <h1>:</h1>
+      <input type="text" id="minutes" class="time-input enabled" 
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+      maxlength="2" placeholder="00" autocomplete="off">
+      <h1>:</h1>
+      <input type="text" id="seconds" class="time-input enabled" 
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+      maxlength="2" placeholder="00" autocomplete="off">
+    </div>
+
+    <div id="buttons">
+      <button class="btn start-pause">Iniciar</button>
+      <button class="btn cancel">Cancelar</button>
+    </div>
+
+    <div id="info">
+      <p><strong>I</strong> - Iniciar</p>
+      <p><strong>P</strong> - Pausar</p>
+      <p><strong>C</strong> - Cancelar</p>
+    </div>
+
+
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

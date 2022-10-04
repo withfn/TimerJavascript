@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,300;1,400;1,500&display=swap');
+:root {
+  --white: white;
+  --time-color: #464646;
+  --time-pause-color: #808080;
+  --title-color: #ADADAD;
+  --background-color: #E6E6E6;
+  --background-focus-color: #E2DEFE;
+  --btn-text-color: #f8f8ff;
+  --btn-background-color: #6c63ff;
+  --btn-background-hover-color: #5E58E0;
+  --btn-background-active-color: #5953D4;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter Tight', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 5em;
+  font-style: italic;
+  font-weight: 500;
+}
+
+h2 {
+  width: 120px;
+  color: var(--title-color);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+#description {
+  width: 430px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#div-time {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  color: var(--time-pause-color);
+}
+
+
+#buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  height: 40px;
+  width: 120px;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+
+  color: var(--btn-text-color);
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--btn-background-color);
+}
+  .btn:hover {
+    background-color: var(--btn-background-hover-color);
+    cursor: pointer;
+  }
+  .btn:active {
+    background-color: var(--btn-background-active-color);
+  }
+
+#info {
+  margin-top: 40px;
+  display: flex;
+  gap: 18px;
+  color: var(--time-color);
+}
+
+input[type="text"] {
+  font-size:  5em;
+  font-style: italic;
+  font-weight: 500;
+}
+
+input[type="text"]::placeholder {
+  color: var(--title-color)
+}
+
+/* input[type="text"]:focus {
+  border: 1px solid var(--time-pause-color);
+} */
+
+.time-input {
+  background-color: var(--background-color);
+  color: var(--time-pause-color);
+  width: 1.5em;
+  height: 1.2em;
+  border: 0;
+  border-radius: 15px 5px;
+  padding-left: 12px;
+  transform: skew(-5deg)
+}
+  .enabled.time-input:focus {
+    border: 2px solid var(--time-pause-color);
+}
